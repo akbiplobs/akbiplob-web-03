@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A K Biplob</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left_col">
+        <img src="akbiplob_logo.png" class="logo" />
+        <div class="content">
+          <h1>Add plants to living space</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing officiis
+            voluptatem soluta labore excepturi dolorum, itaque nobis!
+          </p>
+          <button type="button">LEARN MORE</button>
+        </div>
+      </div>
+      <div class="right_col">
+        <div class="slider">
+          <img src="pic-1.jpg" id="Slide"/>
+        </div>
+        <div class="silder_content">
+          <h2>Where can I fiing ideas for small rooms?</h2>
+          <hr />
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit
+            repudiandae porro tenetur <br />
+            eiusibus, officiis voluptatum cumque aliquid odio voluptate
+            explicabo est? Alias quaesentium.
+          </p>
+
+          <div class="controller">
+            <img src="back.png" id="BackBtn" />
+            <div class="vertical_line"></div>
+            <img src="next.png" id="NextBtn" />
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+ <script>
+
+let Slide = document.getElementById('Slide');
+let BackBtn = document.getElementById('BackBtn');
+let NextBtn = document.getElementById('NextBtn');
+
+let slideimages = new Array(
+  'pic-1.jpg',
+  'pic-2.jpg',
+  'pic-3.jpg',
+  'pic-4.jpg',
+);
+
+let i = 0;
+
+NextBtn.onclick = function(){
+  if(i < 3){
+
+    Slide.src = slideimages[i+1];
+    i++;
+  }
+}
+
+BackBtn.onclick = function(){
+  if(i > 0){
+
+    Slide.src = slideimages[i-1];
+    i--;
+  }
+}
+
+ </script> 
+  </body>
+</html>
